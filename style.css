@@ -1,0 +1,237 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* colors */
+:root {
+    /* Primary */
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyanO: hsl(178, 100%, 50%, 0.5);
+
+
+    /* Neutral */
+
+    --vDarkBlueM: hsl(217, 54%, 11%);
+    /*(main BG)*/
+    --vDarkBlueC: hsl(216, 50%, 16%);
+    /*(card BG)*/
+    --vDarkBlueL: hsl(215, 32%, 27%);
+    /*(line)*/
+}
+
+* {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+p {
+    font-size: 18px;
+    color: var(--softBlue);
+    font-weight: 300;
+}
+
+hr {
+    color: var(--vDarkBlueL);
+}
+
+/* Screens */
+/* web */
+@media screen and (max-width:1440px) {
+    main {
+        width: 350px;
+        height: 600px;
+        margin: 150px 0;
+    }
+    #Scard {
+        top: 190px;
+    }
+    #THcard {
+      display: none;
+    }
+    .mainImg {
+        width: 300px;
+    }
+    .show {
+        width: 300px;
+        height: 300px;
+    }
+    .view {
+        margin: 125px 0 0 125px;
+    }
+    #title {
+        margin-bottom: 25px;
+    }
+    #details {
+        margin: 30px 0 25px 0;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:375px) {
+    main {
+        width: 330px;
+        height: 540px;
+        margin: 60px 0;
+    }
+    #Scard {
+        top: 35px;
+    }
+    #THcard {
+        width: 440px;
+        height: 700px;
+        background-color: #0c182b;
+        position: absolute;
+        z-index: -2;
+        top: 130px;
+        border-radius: 30px;
+    }
+    .mainImg, .show  {
+        width: 275px;
+    }
+    .show{
+        height: 275px;
+    }
+    .view {
+        position: absolute;
+        margin: 115px 0 0 115px;
+    }
+    #title {
+        margin-bottom: 15px;
+    }
+    #details {
+        margin: 20px 0 15px 0;
+    }
+
+
+}
+
+body {
+    background-color: var(--vDarkBlueM);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* card */
+main {
+    
+    background-color: var(--vDarkBlueC);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#Scard {
+    width: 380px;
+    height: 600px;
+    background-color: #0c1729;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.mainImg {
+    border-radius: 10px;
+    margin: 25px 0;
+}
+.show {
+    position: absolute;
+    margin: 25px 0;
+    border-radius: 10px;
+    background-color: var(--cyanO);
+    display: none;
+}
+
+.view {
+    position: absolute;
+}
+
+.mainImg:hover+.show {
+    display: block;
+    cursor: pointer;
+}
+
+.show:hover {
+    display: block;
+    cursor: pointer;
+
+}
+
+#txt {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+}
+
+#title {
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+#details {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+#details p {
+    font-size: 16px;
+}
+
+#details img {
+    margin-right: 8px;
+}
+
+#eth,
+#days {
+    display: flex;
+    flex-direction: row;
+    width: 110px;
+}
+
+#eth p {
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+#create {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0 30px 0;
+}
+
+#create img {
+    margin: 0 20px 0 0;
+    width: 30px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+#create p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#create span {
+    color: white;
+}
+
+#title:hover,
+#create span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+/* footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
